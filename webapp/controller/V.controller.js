@@ -20,15 +20,16 @@ sap.ui.define(
                 const oDialog = new Dialog({
                     content: [
                         new Text({
-                            text: {
-                                parts: [
-                                    { path: "mParts>/part1" },
-                                    { path: "mParts>/part2" }
-                                ],
-                                formatter: function (part1, part2) {
-                                    return part1 + part2 + "works";
-                                }
-                            }
+                            // text: {
+                            //     parts: [
+                            //         { path: "mParts>/part1" },
+                            //         { path: "mParts>/part2" }
+                            //     ],
+                            //     formatter: function (part1, part2) {
+                            //         return part1 + part2 + "works";
+                            //     }
+                            // }
+                            text: "{= ${mParts>/part1} ? ${mParts>/part1} : '' }: {mParts>/part2}"
                         })
                     ]
                 });
